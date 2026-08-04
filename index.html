@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dashboard</title>
+</head>
+<body class="flex flex-col min-h-screen">
+    <nav class="flex flex-row p-2 mb-10 text-2xl gap-20 items-center shadow-lg h-24">
+        <img class="w-32 h-32" src="img/Logo_Barrio_Negro.png" alt="Logo_Barrio_Negro">
+        <a href="https://barriopizza.com/index.html">
+            <button class="font-bold">Inicio</button>
+        </a>
+    </nav>
+    <section class="pb-10">
+        <div class="pb-3 pl-10 flex flex-row gap-3">
+            <div class="flex gap-1 text-lg">
+                <p>Seleccione una sucursal: </p>
+                <select id="sucursales" name="Sucursales" class="border border-white w-32 cursor-pointer"></select>
+            </div> 
+            <!--Resumen de problemas-->
+            <div>
+                <div class="flex items-center gap-2">
+                    <img class="w-8 h-8" src="img/Atention.png" alt="alerta">
+                    <p> 
+                        Total de alertas: 
+                        <span id="totalAlertas" class="font-bold">0</span>
+                    </p>
+                </div>
+                <div><img src="" alt=""></div>
+            </div>
+        </div>
+        <!--Tabla-->
+        <div class="pl-6 pb-5 flex gap-10">
+            <table class="text-lg table-auto">
+                    <tr class="border-b border-gray-300">
+                        <th class="px-2">Ingrediente</th>
+                        <th class="px-2">Cantidad restante</th>
+                        <th class="px-2">Consumo proyectado</th>
+                        <th class="px-2">Cantidad real necesaria</th>
+                        <th class="px-2">Cantidad a comprar (unidad base)</th>
+                    </tr>
+                <tbody id="tablaInventario" ></tbody>
+                </tbody>
+            </table>
+            <!--Formulario de edición-->
+            <div class="flex flex-col gap-2">
+                <h1 class="text-lg">Editar orden de compra:</h1>
+                <div class="grid grid-cols-2 gap-5">
+                    <input id="nombreIngrediente" type="text" placeholder="Nombre del ingrediente" class="border rounded-xl w-48  pl-2" >
+                    <input id="cantidadRestante" type="text" placeholder="Cantidad restante" class="border rounded-xl w-48  pl-2" >
+                    <input id="cantidadComprar" type="text" placeholder="Cantidad a comprar" class="border rounded-xl w-48  pl-2" >
+                </div>
+                <div>
+                    <input id="guardar" type="submit" value="Guardar" class="border rounded-4xl bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-1 w-24 cursor-pointer">
+                    <input id="exportar" type="submit" value="Exportar" class="border rounded-4xl bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-1 w-24 cursor-pointer">
+                </div>
+                <div class="flex pt-5">
+                    <table>
+                        <tbody id="tablaSucursales"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="h-32 bg-black text-white justify-center items-center flex flex-row gap-2">
+        <img src="img/Logo_Barrio_Negro.png" alt="Logo_Barrio_Negro" class="size-30 invert ">
+        <p>SUPPORT YOUR LOCAL BARRIO</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
