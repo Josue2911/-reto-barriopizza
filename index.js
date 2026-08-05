@@ -268,6 +268,13 @@ let inventario = [];
                     o.ingrediente_id === item.ingrediente_id
                 );
 
+                console.log(`--- item ${item.ingrediente_id} (${sucursal}) ---`);
+                console.log("item (inventario):", item);
+                console.log("ingrediente:", ingrediente);
+                console.log("historial:", historial);
+                console.log("promedio:", promedio);
+                console.log("orden:", orden);
+
             // Cantidad necesaria
             const necesaria =
                 Math.max(
