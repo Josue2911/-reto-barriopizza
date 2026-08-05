@@ -18,5 +18,5 @@ Para esto cree varias funciones diferentes para mantener un orden en el código 
 - `editarIngrediente()` / `guardarCambios()`: permiten editar y persistir (en memoria) los valores de un ingrediente específico, utiliza el boton de `guardar`, para almacenar el cambio en memoria.
 - `exportarCSV()`: genera y descarga un CSV con las órdenes de compra actualizadas.
 
-**Si cuando emtran a la pagina, la tabla apaareec vacia, deben seleccionar una sucursal y ya le saldra la informcaion correctamente**
+**Si cuando emtran a la pagina, la tabla aparece vacia, deben seleccionar una sucursal y ya le saldra la informcaion correctamente**
 ### Enlace del proyecto en vercel: https://reto-barriopizza.vercel.app
